@@ -1,10 +1,21 @@
-import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Login from "./Pages/Login";
+import Profile from "./Pages/Profile";
+import SignUp from "./Pages/SignUp";
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-cyan-600'>fadfjahfudg dkjghh</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/signUp" element={<SignUp />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
